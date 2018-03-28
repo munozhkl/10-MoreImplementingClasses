@@ -95,17 +95,17 @@ class Baby(object):
         print('Hello baby', self.name, '!')
         self.count = 0
     def feed_baby(self):
-        print('Thank you for feeding', self.name)
+        print('Thank you for feeding Baby', self.name)
         self.count = self.count + 1
     def hour_passes(self):
-        if self.count == 0 or self.count == 1:
+        if self.count == 0:
             print('Baby', self.name, 'is sleeping')
-        if self.count == 2:
+        if self.count == 1 or self.count == 2:
             print('Baby', self.name, 'is awake. Time for food.')
         if self.count >= 3:
             print('Baby', self.name, 'is CRYING uncontrollably! Feed the Baby!')
         self.count = self.count + 1
-
+# How can it go back to count = 1 if it's already run through more than 3 times?
 
 
 
