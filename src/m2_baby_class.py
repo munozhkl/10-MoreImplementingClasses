@@ -2,7 +2,7 @@
 A   Baby   class and methods that use the Baby class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and Kathi Munoz.
+         their colleagues and Kathi L Munoz.
 """  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
