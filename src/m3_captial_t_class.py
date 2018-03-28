@@ -2,8 +2,8 @@
 A   CapitalT   class and methods that use the Cross class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Kathi Munoz.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -16,7 +16,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_simple_t()
+    run_test_simple_t()
     # run_test_set_colors()
     # run_test_move_by()
     # run_test_clone()
@@ -142,6 +142,12 @@ class CapitalT(object):
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
+        self.h_rect = rg.Rectangle(rg.Point(intersection_center.x - 0.5*width, intersection_center.y -
+        0.5*letter_thickness), rg.Point(intersection_center.x + 0.5*width, intersection_center.y + 0.5*letter_thickness))
+        self.v_rect = rg.Rectangle(rg.Point(intersection_center.x - 0.5*letter_thickness,
+        intersection_center.y - 0.5*letter_thickness), rg.Point(intersection_center.x + 0.5*letter_thickness,
+                                                    intersection_center.y + 0.5*letter_thickness + (height - width)))
+
 
     def attach_to(self, window):
         """
@@ -167,6 +173,11 @@ class CapitalT(object):
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
         # --------------------------------------------------------------
+        if isinstance(window, rg.RoseWindow):
+            window = window.initial_canvas
+        window._draw(self)
+
+
 
     def set_colors(self, fill_color, outline_color):
         """
