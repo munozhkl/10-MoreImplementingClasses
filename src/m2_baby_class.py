@@ -39,7 +39,7 @@ def main():
 
 
 # ----------------------------------------------------------------------
-# TODO: 2. Implement a class called   Baby   that has a constructor and
+# DONE: 2. Implement a class called   Baby   that has a constructor and
 #   two methods, as described below.  Your finished Baby class should
 #   cause the code above to display the expected output.  Hint: Your
 #   class will need instance variables that you must figure out.
@@ -96,15 +96,16 @@ class Baby(object):
         self.count = 0
     def feed_baby(self):
         print('Thank you for feeding Baby', self.name)
-        self.count = self.count + 1
+        self.count = 0
     def hour_passes(self):
-        if self.count == 0:
+        self.count = self.count + 1
+        if self.count == 1:
             print('Baby', self.name, 'is sleeping')
-        if self.count == 1 or self.count == 2:
+        if self.count == 2:
             print('Baby', self.name, 'is awake. Time for food.')
         if self.count >= 3:
             print('Baby', self.name, 'is CRYING uncontrollably! Feed the Baby!')
-        self.count = self.count + 1
+
 # How can it go back to count = 1 if it's already run through more than 3 times?
 
 
